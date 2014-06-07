@@ -1,0 +1,35 @@
+<!doctype html>
+	<html lang="en">
+		<head>
+			<meta charset="utf-8" />
+			<title></title>
+			<link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+			<link rel="stylesheet" href="style.css" />
+		</head>
+		<body ng-app='toDo2'>
+			<div class='container' ng-controller='MainCtrl'>
+				<h1 class='title'>To Do List</h1>
+			  <input type="text" class="form-control" placeholder="Search" ng-model='itemFilter'>
+			  <div class="input-group">
+				  <span class="input-group-addon" ng-click='listAdd()'>Create</span>
+				  <input type="text" class="form-control" placeholder="Add Item" ng-model='listItem'>
+				</div>
+<!-- 			  <input type="text" class="form-control" placeholder="Add Item" ng-model='listItem'> -->
+<!-- 			  <button type='button' class='btn btn-default' ng-click='listAdd()'>Create</button> -->
+			  <p>{{listItem}}</p>
+	      <ul class="list-group">
+					<li class="list-group-item" ng-repeat="item in list | filter: itemFilter"><input type='checkbox'> {{item.task}}</li>
+				</ul>
+<!-- 				<div ng-repeat="item in list">
+					{{item.item}}
+				</div> -->
+			</div>
+ 			<script src="http://cdn.firebase.com/js/client/1.0.6/firebase.js"></script>
+ 			<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.17/angular.min.js"></script>
+ 			<script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.js"></script>
+ 			<script src="app.js"></script>
+ 			<script src="main.js"></script>
+ 			<script src="service.js"></script>
+ 			<script src="fbfactory.js"></script>
+		</body>
+	</html>

@@ -1,0 +1,35 @@
+.container {
+	width: 70%;
+	margin: auto;
+}
+
+h1 {
+	text-align: center;
+}
+
+.title {
+	background: steelblue;
+}
+
+p {
+	display: inline;
+}
+
+.btn{
+	margin: 10px 0px;
+	display: inline;
+}
+
+.btn-default {
+	margin: 10px 0px;
+	display: inline;
+}
+
+/*.form-control {
+	margin: 10px 0px;
+}
+
+.input-group-addon {
+	border: 10px solid;
+	box-sizing: border-box;
+}*/
