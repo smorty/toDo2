@@ -3,12 +3,14 @@
 angular.module('toDo2')
   .controller('MainCtrl', ['$scope', 'fbFactory',
   	function($scope, service){
-  		$scope.list = service.getItem();
+  		service.getItem().then(function(data){
+        $scope.list = data;
+      })
   		$scope.listAdd = function(){
   			service.addItem({task: $scope.listItem});
   			$scope.listItem = '';
   		};
-  		service.initItems();
+  		// service.initItems();
   	}
 ]);
 
